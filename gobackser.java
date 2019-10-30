@@ -103,27 +103,3 @@ class gobackser
 		System.out.println("Quiting");
 	}
 }
-/* OUTPUT 
-gescoe@gescoe-OptiPlex-3020:~/Desktop/cnl_2015_pattern/3gobackn$ javac gobackser.java
-gescoe@gescoe-OptiPlex-3020:~/Desktop/cnl_2015_pattern/3gobackn$ java gobackser
-...........Server..........
-Waiting for connection....
-Received request for sending frames
-Sending....
-sending frame no 0
-Waiting for acknowledgement 
-received ack for frame no: 0 as 0
-sending frame no 1
-Waiting for acknowledgement 
-received ack for frame no: 1 as 1
-sending frame no 2
-sending frame no 3
-Waiting for acknowledgement 
-Resending frame 2
-Waiting for ack 
-received ack for frame no: 2 as 2
-Resending frame 3
-Waiting for ack 
-received ack for frame no: 3 as 3
-Quiting
-*/
