@@ -1,12 +1,4 @@
-﻿/*	Assignment No:
-Write a program using TCP socket for wired network for following 
-d. Calculator (Trigonometry) 
-Name:Arpita Devargaonkar
-Batch:TEA(2)
-Rollno.:34
-*/
-//server
-
+﻿
 #include<sys/types.h>
 #include<sys/socket.h>
 #include<stdio.h>
@@ -36,27 +28,18 @@ servaddr.sin_addr.s_addr=inet_addr("192.168.3.34");
 servaddr.sin_port=6666;
 
 if((bind(sockfd, (struct sockaddr *)&servaddr,sizeof(servaddr)))==0)
-printf("bind sucessful\n");   //bind() assigns the
-     //  address  specified  by  addr  to  the  socket  referred  to by the file
-      // descriptor sockfd.  addrlen  specifies  the  size,  in  bytes,  of  the
-     //  address structure pointed to by addr.  Traditionally, this operation is
-      // called “assigning a name to a socket”.
+printf("bind sucessful\n");   
 
-//printf("%d\n",b);
-
-if((listen(sockfd,5))==0) //listen for connections on a socket
+if((listen(sockfd,5))==0)
 printf("listen sucessful\n");
-//printf("%d\n",l);
-
 sin_size = sizeof(clientaddr);
 if((connfd=accept(sockfd,(struct sockaddr *)&clientaddr,&sin_size))>0);
 printf("accept sucessful\n");
 val = PI / 180;
 read(connfd, &op,1);
-//printf("\n op=%d",op);
+
 
 read(connfd, &angle1, sizeof(angle1));
-//printf("\n angle is=%lf \n",angle1);
 
 switch(op) {
         case '1': result=sin(angle1*val);
@@ -78,14 +61,3 @@ write(connfd,&result,sizeof(result));
 close(connfd);   
 close(sockfd);
 }
-
-/* Output:
-gescoe@gescoe-OptiPlex-3020:~$ cd Desktop
-gescoe@gescoe-OptiPlex-3020:~/Desktop/$ gcc strignometry.c -lm
-gescoe@gescoe-OptiPlex-3020:~/Desktop/$ ./a.out
-socket created sucessfully
-bind sucessful
-listen sucessful
-accept sucessful
-sin(30.000000)=0.500000 
-*/
