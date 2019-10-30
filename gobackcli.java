@@ -14,10 +14,10 @@ class gobackcli
 
 		BufferedInputStream in=new BufferedInputStream(connection.getInputStream());
 		DataOutputStream out=new DataOutputStream(connection.getOutputStream());
-		Scanner scr=new Scanner(System.in);// this will be used to accept i/p from console
+		Scanner scr=new Scanner(System.in);
 
 
-		System.out.println(".......Client........");
+		System.out.println("Client");
 		System.out.println("Connect");
 		System.out.println("Enter the number of frames to be requested to the server");
 		int c=scr.nextInt();
@@ -74,25 +74,3 @@ class gobackcli
 
 	}
 }
-/* OUTPUT
-gescoe@gescoe-OptiPlex-3020:~/Desktop/cnl_2015_pattern/3gobackn$ javac gobackcli.java
-gescoe@gescoe-OptiPlex-3020:~/Desktop/cnl_2015_pattern/3gobackn$ java gobackcli
-Localhost/127.0.0.1
-.......Client........
-Connect
-Enter the number of frames to be requested to the server
-4
-Enter the type of trans. Error=1 ; No Error=0
-1
-received frame no: 0
-Sending acknowledgement for frame no: 0
-received frame no: 1
-Sending acknowledgement for frame no: 1
-Discarded frame no: 3
-Sending NEGATIVE ack
-received frame no: 2
-Sending acknowledgement for frame no: 2
-received frame no: 3
-Sending acknowledgement for frame no: 3
-Quiting
-*/
