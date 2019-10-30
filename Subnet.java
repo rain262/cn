@@ -12,7 +12,7 @@ String bip = "";
 
 for(int i=0;i<4;i++)
 {
-split_bip[i] = appendZeros(Integer.toBinaryString(Integer.parseInt(split_ip[i]))); // "18" => 18 => 10010 => 00010010
+split_bip[i] = appendZeros(Integer.toBinaryString(Integer.parseInt(split_ip[i]))); 
 bip += split_bip[i];
 }
 
@@ -61,15 +61,4 @@ String temp = new String("00000000");
 return temp.substring(s.length())+ s;
 }
 }
-/*
-OUTPUT
-gescoe@gescoe-OptiPlex-3020:~/Desktop/cnl_2015_pattern/4subnetting$ javac Subnet.java 
-gescoe@gescoe-OptiPlex-3020:~/Desktop/cnl_2015_pattern/4subnetting$ java Subnet
-Enter the ip address: 192.168.2.10
-IP in binary is 11000000101010000000001000001010
-Enter the number of addresses: 256
-Number of bits required for address = 8
-The subnet mask is = 24
-Subnet address is = 192.168.2.0
-Broadcast address is = 192.168.2.255
-*/
+
