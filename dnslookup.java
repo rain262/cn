@@ -1,14 +1,4 @@
-/**************************************************************
-ASSIGNMENT NO. 11  (Group A)
-Name: Harshada Sonawane
-Class: TE Computer 
-Batch: TEB -3
-Roll No. 50
-Problem statement :-Write a program for DNS lookup. Given an IP address input, it should return URL and vice-
-versa.
-***************************************************************/
-//DNSLookup.java
-// Print out DNS Record for an Internet Address
+
 import javax.naming.directory.Attributes;
 import javax.naming.directory.InitialDirContext;
 import javax.naming.NamingEnumeration;
@@ -20,7 +10,6 @@ public class DNSLookup
 {
     public static void main(String args[])
     {
-        // explain what program does and how to use it 
         if (args.length != 1)
         {
             System.err.println("Print out DNS Record for an Internet Address");
@@ -81,14 +70,5 @@ gescoe@gescoe-OptiPlex-3020:~/Desktop$ java DNSLookup flipkart.com
 flipkart.com/163.53.78.128
 -- DNS INFORMATION --
 A: 163.53.78.128
-gescoe@gescoe-OptiPlex-3020:~/Desktop$ java DNSLookup diablo.cs.fsu.edu
-diablo.cs.fsu.edu/128.186.122.12
--- DNS INFORMATION --
-A: 128.186.122.12
 
-gescoe@gescoe-OptiPlex-3020:~/Desktop$ java DNSLookup yahoo.com
-yahoo.com/206.190.36.45
--- DNS INFORMATION --
-NS: ns4.yahoo.com., ns5.yahoo.com., ns2.yahoo.com., ns1.yahoo.com., ns3.yahoo.com.
-gescoe@gescoe-OptiPlex-3020:~/Desktop$ 
 */
