@@ -322,4 +322,13 @@ void PrintData (unsigned char* data , int Size)
         }
     }
 }
-
+/*
+OUTPUT:
+gescoe@gescoe-OptiPlex-3020:~$ cd Desktop
+gescoe@gescoe-OptiPlex-3020:~/Desktop$ cd socket_prog
+gescoe@gescoe-OptiPlex-3020:~/Desktop/socket_prog$ gcc packet.c
+gescoe@gescoe-OptiPlex-3020:~/Desktop/socket_prog$ sudo ./a.out
+[sudo] password for gescoe: 
+Starting...
+TCP : 2   UDP : 12   ICMP : 0   IGMP : 0   Others : 32   Total : 45
+*/
