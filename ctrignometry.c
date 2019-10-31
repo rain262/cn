@@ -1,10 +1,4 @@
-/*
-Assignment No:- 5
-TItle - Write a program using tcp socket for wired network for implementation of a trignometric calculator
-Name:Nikita Birari
-Roll NO : 23
-Batch : TE(A1)
-*/
+
 
 #include<sys/types.h>
 #include<sys/socket.h>
@@ -48,20 +42,5 @@ read(sockfd,&result,sizeof(result));
 printf("\n Operation result from server=%lf\n",result);  
 close(sockfd);
 }
-/*Output
 
-priya@priya~/Desktop/CN_Practicals/Group-A/Ass5/a$ gcc msgC.c
-socket created sucessfully
-connect sucessful
-Enter operation:
- 1:sin 
- 2:cos
- 3:tan 
- 1
-Enter angle in degree:45
-
- Operation result from server=0.707107
-priya@priya~/Desktop/CN_Practicals/Group-A/Ass5/a$ gcc msgC.c
-
-*/
 
